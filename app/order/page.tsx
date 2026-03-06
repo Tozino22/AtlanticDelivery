@@ -103,8 +103,8 @@ function OrderPageInner() {
                                 <button
                                     onClick={() => setSelectedRestaurantId(null)}
                                     className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-bold border transition-all ${!selectedRestaurantId
-                                            ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
-                                            : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'
+                                        ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+                                        : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'
                                         }`}
                                 >
                                     <Store className="w-3.5 h-3.5" /> All Restaurants
@@ -114,8 +114,8 @@ function OrderPageInner() {
                                         key={r.id}
                                         onClick={() => setSelectedRestaurantId(r.id)}
                                         className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-bold border transition-all ${selectedRestaurantId === r.id
-                                                ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
-                                                : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'
+                                            ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+                                            : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'
                                             }`}
                                     >
                                         {r.emoji} {r.name}
@@ -126,7 +126,10 @@ function OrderPageInner() {
 
                         {/* Selected restaurant info */}
                         {selectedRestaurant && (
-                            <div className={`rounded-2xl bg-gradient-to-r ${selectedRestaurant.color} p-4 text-white mb-5 flex items-center gap-3`}>
+                            <div
+                                className="rounded-2xl p-4 text-white mb-5 flex items-center gap-3"
+                                style={{ background: selectedRestaurant.gradient }}
+                            >
                                 <span className="text-4xl">{selectedRestaurant.emoji}</span>
                                 <div>
                                     <h2 className="font-black text-lg leading-tight">{selectedRestaurant.name}</h2>
@@ -170,8 +173,11 @@ function OrderPageInner() {
                                                     <span className="font-black text-blue-600 whitespace-nowrap">${item.price.toFixed(2)}</span>
                                                 </div>
                                                 {/* Restaurant badge — shown when viewing all */}
-                                                {!selectedRestaurantId && (
-                                                    <span className={`inline-block text-[10px] font-black uppercase tracking-wide text-white px-2 py-0.5 rounded-md bg-gradient-to-r ${restaurant?.color} mb-1`}>
+                                                {!selectedRestaurantId && restaurant && (
+                                                    <span
+                                                        className="inline-block text-[10px] font-black uppercase tracking-wide text-white px-2 py-0.5 rounded-md mb-1"
+                                                        style={{ background: restaurant.gradient }}
+                                                    >
                                                         {item.restaurantName}
                                                     </span>
                                                 )}
