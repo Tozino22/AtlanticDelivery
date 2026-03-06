@@ -135,8 +135,9 @@ GUIDELINES:
 
         if (message.tool_calls) {
             for (const toolCall of message.tool_calls) {
-                if (toolCall.function.name === "update_menu_item") {
-                    const { itemId, available, itemName } = JSON.parse(toolCall.function.arguments);
+                const tc = toolCall as any;
+                if (tc.function.name === "update_menu_item") {
+                    const { itemId, available, itemName } = JSON.parse(tc.function.arguments);
                     await updateMenuItem(itemId, { available });
                     return `✅ Action Confirmed: I have updated ${itemName} to be ${available ? 'available' : 'out of stock'}.`;
                 }
