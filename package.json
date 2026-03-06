@@ -12,10 +12,10 @@
     "@supabase/supabase-js": "^2.98.0",
     "@vapi-ai/web": "^2.5.2",
     "lucide-react": "^0.577.0",
-    "next": "16.1.6",
-    "openai": "^6.26.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "next": "15.1.6",
+    "openai": "^4.85.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "twilio": "^5.12.2"
   },
   "devDependencies": {

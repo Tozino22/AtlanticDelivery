@@ -132,6 +132,8 @@ GUIDELINES:
         });
 
         const message = response.choices[0].message;
+        // Forced build tag: v2.1
+
 
         if (message.tool_calls) {
             for (const toolCall of message.tool_calls) {
