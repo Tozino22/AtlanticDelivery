@@ -36,7 +36,7 @@ export const restaurants: Restaurant[] = [
     },
     {
         id: 'great-delight',
-        name: 'Great Delight',
+        name: 'Vintage Treat',
         tagline: 'Fresh flavours, every single day',
         category: 'African Cuisine',
         rating: 4.6,
@@ -82,13 +82,13 @@ export const menuItems: MenuItemLocal[] = [
         available: true,
         image_url: '/images/amala.png',
     },
-    // Great Delight
+    // Vintage Treat
     {
         id: 'gd-jollof',
         restaurantId: 'great-delight',
-        restaurantName: 'Great Delight',
+        restaurantName: 'Vintage Treat',
         name: 'Jollof Rice',
-        description: "Great Delight's signature Jollof — slow-cooked with secret spices, served with coleslaw and fried fish.",
+        description: "Vintage Treat's signature Jollof — slow-cooked with secret spices, served with coleslaw and fried fish.",
         price: 17.50,
         category: 'Main',
         available: true,
@@ -97,7 +97,7 @@ export const menuItems: MenuItemLocal[] = [
     {
         id: 'gd-amala',
         restaurantId: 'great-delight',
-        restaurantName: 'Great Delight',
+        restaurantName: 'Vintage Treat',
         name: 'Amala',
         description: 'Classic Amala swallow paired with our signature Gbegiri and Ewedu soup, topped with ponmo and shaki.',
         price: 20.00,
